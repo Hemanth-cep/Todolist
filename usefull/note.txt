@@ -1,0 +1,29 @@
+import React, { useState } from "react"
+import DeleteIcon from '@mui/icons-material/Delete';
+
+function Note(props){
+
+    var [doneanime,setdoneanime] = useState(false)
+
+    function handleclick(){
+        props.ondelete(props.id)
+        setdoneanime(false) // if we remove this single line we will understand a big concept
+    }
+
+    function handlecomplete(){
+        setdoneanime(true)
+        props.fortaskdone()
+    }
+
+    return(
+        <div className="note" style={doneanime?{textDecoration:"line-through"}:null}>
+            <div>
+            <h1 onClick={handlecomplete}>{props.title}</h1>
+            <p onClick={handlecomplete}>{props.content}</p>
+            </div>
+            <button onClick={handleclick}><DeleteIcon /></button>
+        </div>
+    )
+}
+
+export default Note

@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: cursive; */
+}                             
+img{
+    height: 100%;
+    width: 100%;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+/* ----------------------------------------header---------------------------- */
+body{
+    background: #eee;
+    background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
+}
+Header{
+    height: 84px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: linear-gradient(to right,red,blue);
+    margin-bottom: 5px;
+}
+/* ------------------------------------body container------------------------------------------- */
+.top-container{
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.input-box{
+    /* border: 2px solid red; */
+    width: 800px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow:0 1px 5px 1px rgb(138, 137, 137);
+    margin-top: 16px;
+    margin-bottom: 42px;
+}
+.inputarea{
+    position: relative;
+    /* border: 1px solid green; */
+    padding: 20px;
+}
+.inputarea input{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.inputarea input , .inputarea textarea{
+    width: 100%;
+    outline: none;
+    padding: 10px;
+    resize: none;
+    border: none;
+    font-size: 25px;
+}
+.inputarea button{
+    position: absolute;
+    right: 40px;
+    bottom: -30px;
+    padding: 20px;
+    width: 80px;
+    border-radius: 50%;
+    outline: none;
+    font-size: 30px;
+    background-color: #86007A;
+    color: white;
+    border: none;
+    box-shadow: 0px 2px 1px rgb(138, 137, 137) ;
+}
+/* ---------------------note box------------- */
+.note-box{
+    /* border: 2px solid black; */
+    width: 800px;
+    /* padding: 20px; */
+    border-radius: 20px;
+}
+
+.note{
+    height: 100px;
+    position: relative;
+    /* border: 2px solid red; */
+    padding: 20px;
+    overflow: scroll;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 5px rgb(138, 137, 137);
+    border-radius: 15px;
+    background: #fff;
+}
+
+.note::-webkit-scrollbar{
+    display: none;
+}
+
+.notemsg{
+    height: 35px;
+}
+
+.note button{
+    background-color: #86007A;
+    color: white;
+    width: 60px;
+    border-radius: 50%;
+    border: none;
+    margin-left: 20px;
+    width: 45px;
+    padding: 8px;
+    position: absolute;
+    right: 13px;
+    top: 36px;
+    z-index: 100;
+}
+.note h1 , .note p{
+    width: fit-content;
+}
+/* ---------------footer------------- */
+.footer{
+    position: fixed;
+    bottom: 0px;
+    height: auto;
+    width: 100%;
+    padding: 5px;
+    background: linear-gradient(to right, red, blue);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 101;
+}
+
+.strike{
+    text-decoration: line-through;
+}
+
+/* -------------------responsive------------------- */
+
+@media (max-width:816px){
+    .input-box{
+        width: 100%;
+    }
+    .note-box{
+        width: 100%;
+    }
+}
+
+@media (max-width:500px){
+    .inputarea{
+        padding: 8px;
+    }
+}
+
+@media (max-width:400px){
+    .inputarea{
+        padding: 5px;
+    }
+
+    .inputarea button{
+        width: 64px;
+        font-size: 0;
+        right: 20px;
+    }
+    .top-container{
+        margin: 15px;
+        margin-bottom: 40px;
+    }
+}
